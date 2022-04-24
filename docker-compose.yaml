@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+
+  webapplicationa:
+    image: webapplicationa
+    ports:
+      - 8082:8082
+      - 8084:8084
+
+  webapplicationb:
+    image: webapplicationb
+    ports:
+      - 8083:8083
+      - 8086:8086

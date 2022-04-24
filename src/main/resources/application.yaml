@@ -1,0 +1,14 @@
+server:
+  port: 8082
+management:
+  metrics:
+    export:
+      newrelic:
+        api-key:
+        account-id:
+        enabled: true
+spring:
+  jmx:
+    enabled: true
+event-service-b:
+  url: http://webapplicationb:8083
