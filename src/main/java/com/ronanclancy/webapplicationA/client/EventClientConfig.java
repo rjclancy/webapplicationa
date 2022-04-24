@@ -27,8 +27,8 @@ public class EventClientConfig {
         .create()
         .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000)
         .doOnConnected(connection -> {
-          connection.addHandlerLast(new ReadTimeoutHandler(30000, TimeUnit.MILLISECONDS));
-          connection.addHandlerLast(new WriteTimeoutHandler(30000, TimeUnit.MILLISECONDS));
+          connection.addHandlerLast(new ReadTimeoutHandler(3000, TimeUnit.MILLISECONDS));
+          connection.addHandlerLast(new WriteTimeoutHandler(3000, TimeUnit.MILLISECONDS));
         });
   }
 

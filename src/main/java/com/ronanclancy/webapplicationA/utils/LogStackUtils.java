@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
 @Log4j2
 public class LogStackUtils {
 
@@ -16,7 +15,7 @@ public class LogStackUtils {
     logStack.add(message + throwable);
     printLogStack();
     clearLogStack();
-    throw new RuntimeException(message);
+    throw new RuntimeException(message, throwable);
   }
 
   public static void logInfo(String message) {
