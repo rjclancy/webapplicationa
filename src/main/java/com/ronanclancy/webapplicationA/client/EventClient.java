@@ -1,6 +1,7 @@
 package com.ronanclancy.webapplicationA.client;
 
 import com.ronanclancy.webapplicationA.dto.EventResponse;
+import com.ronanclancy.webapplicationA.utils.LogStackUtils;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,7 @@ public class EventClient {
   }
 
   public EventResponse event(final String eventId) {
-    log.info("Calling service with request " + eventId);
+    LogStackUtils.logInfo("Calling service with request " + eventId);
     return eventServiceClient
         .get()
         .uri("/event/" + eventId)
